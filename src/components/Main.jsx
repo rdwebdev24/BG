@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import data from "../assets/data.json";
 import '../style/main.css'
 export const Main = () => {
+  const [value,setValue] = useState('');
+  let [filterdata, setfilterdata] = useState(data);
+  const handleChange = (e) => {
+    setValue(e.target.value)
+    console.log(value);
+    console.log(data);
+    const filterd = data.filter((item,index)=>item.type.toLowerCase().includes(e.target.value.toLowerCase()))
+    setfilterdata(filterd)
+  }
   return (
-    <main>
-      <h1>Find your Solutions according to your problem</h1>
+    <main className="section2">
+      <div className="search">
+        <input typeof="text" value={value} onChange={handleChange} type="text" />
+        <button>Search</button>
+      </div>
       <div className="card-wrapper">
-        {data.map((item, index) => {
+        {filterdata.map((item, index) => {
           const { type, slokas } = item;
           return (
             <div key={index} className="card-body">

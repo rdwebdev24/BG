@@ -1,0 +1,45 @@
+#landing-wrp{
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 92vh;    
+    background-image: url('../assets/images/krishna.png');
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+
+    .lnding-content{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        line-height: 2.5rem;
+        margin-left: 4rem;
+       
+        width: 35rem;
+        text-align: center;
+        h2{font-size: 2rem;}
+        .krishna{
+            text-align: end;
+        }
+    }
+}
+
+@media screen and (max-width:786px) {
+    #landing-wrp{
+        padding: 0 1rem;
+        .lnding-content{
+            border-radius: 10px;
+            background: #33333391;
+            padding: 1rem;
+            margin-left: 0rem;
+        }
+    }
+}
+@media screen and (max-width:425px) {
+    #landing-wrp{
+        .lnding-content{
+            h2{font-size: 1.5rem;}
+        }
+    }
+}
