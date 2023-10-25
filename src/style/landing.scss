@@ -1,38 +1,90 @@
+$blue:#279EFF;
+$glowColor: #0079FF;
+
 #landing-wrp{
-    background: #333;
-    color: #fff;
+    padding: 0 1rem;
+    // background: #333;
+    // color: #fff;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
-    min-height: 92vh;    
-    background-image: url('../assets/images/krishna.png');
+    min-height: 100vh;    
+    // background-image: url('../assets/images/krishna2.jpg');
     background-repeat: no-repeat;
-    background-position: 90% 50%;
+    background-position: 100% 50%;
+    background-size: contain;
+    svg{
+        path{
+             stroke-dasharray: 700;
+             stroke-dashoffset: 700;
+             stroke-width: 3px;
+             stroke: $blue;
+             filter:drop-shadow( 3px 3px 2px $blue);
+             animation: animate 10s ease infinite, glow 5s linear infinite;
+        }
+        @keyframes animate {
+             0%{
+                  stroke-dashoffset: 0;
+             }
+             80%{
+                  stroke-dashoffset: 700;
+             }
+             100%{
+                  stroke-dashoffset: 1400;
+             }
+        }
+        @keyframes glow {
+            0% {
+              stroke: $glowColor;
+              filter:drop-shadow( 3px 3px 2px $blue);
+            }
+            30% {
+                stroke: $glowColor;
+                filter:drop-shadow( 3px 3px 2px #0802A3);
+            }
+            60% {
+              stroke: $blue;
+              filter:drop-shadow( 0px 0px 10px $blue);
+            }
+            100% {
+              stroke: $glowColor;
+              filter:drop-shadow( 3px 3px 2px $blue);
+            }
+          }
+   }
 
     .lnding-content{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
         line-height: 2.5rem;
         margin-left: 4rem;
+        color: #363435;
        
-        width: 35rem;
+        max-width: 35rem;
         text-align: center;
-        h2{font-size: 2rem;}
-        .krishna{
-            text-align: end;
+        h2{
+            font-size: 3rem;
+            line-height: 5rem;
         }
     }
 }
 
-@media screen and (max-width:786px) {
+@media screen and (max-width:1024px) {
     #landing-wrp{
-        padding: 0 1rem;
         .lnding-content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             border-radius: 10px;
-            background: #33333391;
+            background: #edeaea91;
             padding: 1rem;
             margin-left: 0rem;
+            width: 100%;
+            max-width: 80%;
+        }
+        svg{
+            width: 100% !important;
         }
     }
 }
@@ -41,5 +93,6 @@
         .lnding-content{
             h2{font-size: 1.5rem;}
         }
+       
     }
 }

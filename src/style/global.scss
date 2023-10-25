@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Arizonia&family=Dela+Gothic+One&family=Roboto&family=Rouge+Script&family=Ubuntu&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    // font-family: 'Alex Brush', cursive;
+    font-family: 'Arizonia', cursive;
+    // font-family: 'Rouge Script', cursive;
+    // font-family: 'Dela Gothic One', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Ubuntu', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
 }

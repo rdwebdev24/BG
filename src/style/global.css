@@ -1,5 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Arizonia&family=Dela+Gothic+One&family=Roboto&family=Rouge+Script&family=Ubuntu&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Arizonia", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
 }/*# sourceMappingURL=global.css.map */

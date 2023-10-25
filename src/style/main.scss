@@ -1,33 +1,43 @@
+$blue:#279EFF;
 .section2{
     min-height: 100vh;
-    background: #333;
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem;
     padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 85vw;
+    margin: auto;
 
 
     .search{
-        padding: 0 1rem;
         height: 50px;
         display: flex;
         input{
             border: none;
-            background: #6A6A6A;
+            // background: #6A6A6A;
             width: 100%;
             padding: 0.7rem;
-            color: #fff;
-            caret-color: #FDB018;
+            // color: #fff;
+            caret-color: $blue;
+            border: 1px solid #eee;
+            border-radius: 30px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
             &:focus{outline: none;}
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         }
         button{
             width: 150px;
             border-radius: 0;
             border: none;
-            background: #FDB018;
+            background: $blue;
             color: #fff;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         }
 
     }
@@ -35,28 +45,34 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        gap: 1rem;
+        gap: 2rem;
+       
 
         .card-body{
-            background: #2C2C2C;
-            padding: 1rem;
+            padding: 2rem;
             width: 18rem;
-            border: 1px solid #fdb1189d;
-            border-right: 5px solid #FDB018;
-
+            border-right: 5px solid $blue;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 10px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            font-size: 1.1rem;
+            font-family: 'Ubuntu', sans-serif;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                transform: scale(1.03);
+            }
             h2{
                 margin-bottom: 1rem;
                 text-transform: capitalize;
-                color: #FDB018;
+                color: $blue;
             }
-
             .card-list{
                 list-style-type: none;
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
                 a{
-                    color: #fff;
                     &:hover{color: #FDB018;}
                 }
             }

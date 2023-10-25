@@ -1,5 +1,6 @@
 import React from "react";
 import '../style/landing.css'
+import { Svg } from "./Svg";
 export const Landing = () => {
   return (
     <main id="landing-wrp">
@@ -10,6 +11,7 @@ export const Landing = () => {
         </h2>
         <p className="krishna"> <i> ~ Lord Krishna 💙 </i> </p>
       </div>
+      <Svg/>
     </main>
   );
 };
